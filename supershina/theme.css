@@ -1,0 +1,11 @@
+/* @fonts: onest, montserrat */
+/* Тема «Лес»: светлая, зелёный акцент. */
+:root{
+  --bg:#f6f8f5; --bg2:#ebf1e8; --card:#ffffff; --line:#d7e2d2;
+  --text:#14201a; --muted:#56675c; --accent:#1f9d55; --accent-ink:#ffffff; --accent-soft:rgba(31,157,85,.1);
+  --header-bg:rgba(255,255,255,.92); --hero-rgb:12,26,18;
+  --radius:16px; --btn-radius:12px;
+  --font-body:Onest,system-ui,sans-serif; --font-head:Montserrat,Onest,sans-serif;
+  --head-weight:800; --head-tt:none; --head-ls:-.01em; --link:#16804a;
+}
+.hero h1 span{color:#5fdc93}

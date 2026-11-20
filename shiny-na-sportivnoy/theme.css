@@ -1,0 +1,10 @@
+/* @fonts: manrope, russo-one */
+/* Тема «Лёд»: тёмная сине-зелёная, бирюзовый акцент. */
+:root{
+  --bg:#0a1416; --bg2:#0e1b1e; --card:#132428; --line:#1f383d;
+  --text:#e6f4f5; --muted:#8fb0b4; --accent:#22d3ee; --accent-ink:#06191c; --accent-soft:rgba(34,211,238,.13);
+  --header-bg:rgba(10,20,22,.9); --hero-rgb:7,17,19;
+  --radius:16px; --btn-radius:14px;
+  --font-body:Manrope,system-ui,sans-serif; --font-head:"Russo One",Manrope,sans-serif;
+  --head-weight:400; --head-tt:none; --head-ls:.01em; --link:var(--accent);
+}

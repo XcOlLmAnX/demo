@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data: https://tile0.maps.2gis.com https://tile1.maps.2gis.com https://tile2.maps.2gis.com https://tile3.maps.2gis.com; base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Кар-шин — шиномонтаж в Тольятти (демо-версия)</title>
+<meta name="description" content="Демо-версия сайта шиномонтажа Кар-шин: Тольятти, Центральный район (точка на карте 2ГИС).">
+<link rel="stylesheet" href="vendor/leaflet/leaflet.css" integrity="sha384-c6Rcwz4e4CITMbu/NBmnNS8yN2sC3cUElMEMfP3vqqKFp7GOYaaBBCqmaWBjmkjb">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="theme.css">
+</head>
+<body>
+
+<svg class="sr-only" width="0" height="0" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="currentColor" d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></symbol>
+</svg>
+
+<div class="demo" role="note">Демо-версия: неофициальный сайт, сделанный независимым разработчиком для показа владельцу. «Кар-шин» его не заказывала и не проверяла — актуальные сведения уточняйте по телефону. По запросу сайт будет удалён.</div>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" id="logo"></a>
+    <nav aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#reviews">Отзывы</a>
+      <a href="#book">Запись</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="head-phone" id="headPhone"></a>
+    <a class="head-call" id="headCall" aria-label="Позвонить"><svg class="ico-phone"><use href="#i-phone"/></svg></a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-bg" id="heroBg"></div>
+  <div class="wrap">
+    <div>
+      <div class="tag" id="openTag"><i class="dot" id="openDot"></i><span id="openText"></span></div>
+      <h1><span class="h1-main" id="heroTitle">Шиномонтажная мастерская</span><br>в <span id="heroCity"></span></h1>
+      <p class="lead" id="heroLead"></p>
+      <div class="actions">
+        <a class="btn btn-main" id="heroCall"><svg class="ico-phone"><use href="#i-phone"/></svg>Позвонить</a>
+        <a class="btn btn-ghost" href="#book">Записаться</a>
+      </div>
+      <div class="facts" id="facts"></div>
+    </div>
+  </div>
+  <span class="photo-credit" id="photoCredit"></span>
+</section>
+
+<section class="find" id="find">
+  <div class="wrap">
+    <div class="panel">
+      <small class="muted">Как найти</small>
+      <div class="addr" id="fAddr"></div>
+      <span class="muted" id="fHours"></span>
+      <div class="btns">
+        <a class="btn btn-main" id="fRoute" target="_blank" rel="noopener noreferrer">Построить маршрут</a>
+      </div>
+    </div>
+    <div class="map"><a class="mapFallback" target="_blank" rel="noopener noreferrer">Открыть на карте →</a><div class="mapbox"></div></div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="svc-head">
+      <h2 id="svcTitle">Услуги</h2>
+      <div class="callout" id="priceCallout"><span id="priceCalloutText"></span><a class="btn btn-main" id="priceCall"><svg class="ico-phone"><use href="#i-phone"/></svg>Позвонить</a></div>
+    </div>
+    <div class="price" id="svcGrid"></div>
+    <p class="price-src" id="priceSrc"></p>
+  </div>
+</section>
+
+<section class="extras" id="extras">
+  <div class="wrap">
+    <div class="panel" id="loungePanel">
+      <h3>Пока ждёте — зона отдыха</h3>
+      <ul id="lounge"></ul>
+      <p class="src-note" id="loungeNote"></p>
+    </div>
+    <div class="panel" id="paymentPanel">
+      <h3>Оплата</h3>
+      <ul id="payment"></ul>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-sec" id="reviews">
+  <div class="wrap">
+    <div class="rev-head">
+      <h2>Отзывы клиентов</h2>
+      <a class="score" id="score" target="_blank" rel="noopener noreferrer"></a>
+    </div>
+    <div class="reviews" id="revGrid"></div>
+    <p class="rev-src" id="revSrc"></p>
+  </div>
+</section>
+
+<section class="book" id="book">
+  <div class="wrap">
+    <div>
+      <h2>Записаться</h2>
+      <p id="bookLead">Оставьте имя и что нужно сделать.</p>
+    </div>
+    <div class="book-call" id="bookCall" hidden>
+      <a class="btn" id="bookCallBtn"><svg class="ico-phone"><use href="#i-phone"/></svg><span id="bookCallText"></span></a>
+      <span class="form-hint">Мессенджер для заявок в карточке 2ГИС не указан — запись по телефону.</span>
+    </div>
+    <form id="bookForm" novalidate>
+      <label class="sr-only" for="fName">Ваше имя</label>
+      <input id="fName" name="name" placeholder="Ваше имя" required autocomplete="given-name" maxlength="60">
+      <label class="sr-only" for="svcSelect">Услуга</label>
+      <select name="service" id="svcSelect"></select>
+      <label class="sr-only" for="fCar">Авто и радиус колёс</label>
+      <input id="fCar" name="car" placeholder="Авто и радиус, напр. Vesta R15" maxlength="80">
+      <label class="consent" for="fConsent"><input type="checkbox" id="fConsent" name="pd_consent" value="yes" required><span>Даю <a href="consent.html" target="_blank" rel="noopener">согласие на обработку персональных данных</a></span></label>
+      <button class="btn" type="submit" id="bookBtn">Написать в WhatsApp</button>
+      <span class="form-status" id="formStatus" role="status"></span>
+      <span class="form-hint"><span id="hintLead">Данные не сохраняются на сайте: откроется WhatsApp с готовым текстом, отправляете вы сами.</span> <a href="privacy.html" target="_blank" rel="noopener">Политика обработки персональных данных</a>. Или просто позвоните — <a id="formPhone"></a></span>
+    </form>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="wrap">
+    <div class="panel c-list">
+      <h2>Контакты</h2>
+      <div><small>Адрес</small><span id="cAddr"></span></div>
+      <div><small>Телефон</small><a id="cPhone"></a></div>
+      <div><small>Режим работы (по данным 2ГИС)</small><span id="cHours"></span></div>
+      <div id="branches"></div>
+      <div class="socials" id="socials">
+        <a class="btn btn-ghost" id="cRoute" target="_blank" rel="noopener noreferrer">Маршрут в 2ГИС</a>
+      </div>
+    </div>
+    <div class="map"><a class="mapFallback" target="_blank" rel="noopener noreferrer">Открыть на карте →</a><div class="mapbox"></div></div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="row"><span>Демо-версия сайта, не официальный сайт компании</span><span id="footAddr"></span></div>
+    <span id="legalNote">Неофициальная демо-версия сайта: «Кар-шин» не участвовала в его создании. Адрес, телефон, режим работы, рейтинг, отзывы и фото взяты из открытой карточки организации в <a href="https://2gis.ru/togliatti/firm/70000001080284188" target="_blank" rel="noopener noreferrer">2ГИС</a> по состоянию на ноябрь 2026 г. (сам 2ГИС отмечает, что актуальность данных не подтверждена); автор фото указан на главном экране. Список услуг составлен по карточке 2ГИС (рубрики и атрибуты) и отзывам клиентов; страницы организации, указанные в 2ГИС: <a href="https://t.me/+79033320505" target="_blank" rel="noopener noreferrer">Telegram</a>. Всё это может быть неактуально — уточняйте по телефону. Отзывы цитируются с указанием автора, даты и источника. Названия и товарные знаки принадлежат их владельцам. Сведения на сайте не являются публичной офертой. Сам сайт не устанавливает cookie и не использует сервисы аналитики; при загрузке карты сервер 2ГИС может установить свои технические cookie (защита от DDoS-атак). По запросу владельца или правообладателя сайт будет удалён.</span>
+    <span><a href="privacy.html">Политика обработки персональных данных</a> · <a href="consent.html">Согласие на обработку персональных данных</a></span>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-main" id="barCall"><svg class="ico-phone"><use href="#i-phone"/></svg>Позвонить</a>
+  <a class="btn btn-ghost" href="#book">Записаться</a>
+</div>
+
+<script src="vendor/leaflet/leaflet.js" integrity="sha384-OltTLy59ivE5w+ocQ21aqiUxU0zwoz9i13cd8WXN5oRmQrBDfFrw154frNmsMTND"></script>
+<script src="config.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

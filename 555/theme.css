@@ -1,0 +1,11 @@
+/* @fonts: golos-text, unbounded */
+/* Тема «Чистый лист»: светлая, синий акцент, мягкие скругления. */
+:root{
+  --bg:#f5f7fb; --bg2:#eaf0f8; --card:#ffffff; --line:#d9e1ee;
+  --text:#121a2a; --muted:#5a6680; --accent:#1f6feb; --accent-ink:#ffffff; --accent-soft:rgba(31,111,235,.1);
+  --header-bg:rgba(255,255,255,.92); --hero-rgb:10,22,44;
+  --radius:22px; --btn-radius:999px;
+  --font-body:"Golos Text",system-ui,sans-serif; --font-head:Unbounded,"Golos Text",sans-serif;
+  --head-weight:800; --head-tt:none; --head-ls:-.01em; --link:#1a5fcc;
+}
+.hero h1 span{color:#6ea8ff}

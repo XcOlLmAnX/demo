@@ -1,0 +1,12 @@
+/* @fonts: rubik, russo-one */
+/* Тема «Красная линия»: светлая, красный акцент, прямоугольные кнопки, заголовки капсом. */
+:root{
+  --bg:#f4f3f0; --bg2:#ebe9e4; --card:#ffffff; --line:#dedad2;
+  --text:#17171a; --muted:#5f6067; --accent:#d7262e; --accent-ink:#ffffff; --accent-soft:rgba(215,38,46,.1);
+  --header-bg:rgba(255,255,255,.92); --hero-rgb:20,18,20;
+  --radius:10px; --btn-radius:8px;
+  --font-body:Rubik,system-ui,sans-serif; --font-head:"Russo One",Rubik,sans-serif;
+  --head-weight:400; --head-tt:uppercase; --head-ls:.01em; --link:#b81d24;
+  --book-bg:#17171a; --book-ink:#ffffff; --book-btn:#d7262e; --book-btn-ink:#ffffff;
+}
+.book .consent a,.book .form-hint a{color:#fff}

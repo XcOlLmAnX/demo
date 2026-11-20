@@ -1,0 +1,11 @@
+/* @fonts: montserrat, exo-2 */
+/* Тема «Ночной сервис»: тёмно-синяя, оранжевый акцент. */
+:root{
+  --bg:#0b1322; --bg2:#101b2e; --card:#15223a; --line:#22324f;
+  --text:#eaf0fa; --muted:#93a3bd; --accent:#ff7a1a; --accent-ink:#ffffff; --accent-soft:rgba(255,122,26,.14);
+  --header-bg:rgba(11,19,34,.9); --hero-rgb:9,16,30;
+  --radius:14px; --btn-radius:12px;
+  --font-body:Montserrat,system-ui,sans-serif; --font-head:"Exo 2",Montserrat,sans-serif;
+  --head-weight:800; --head-tt:none; --head-ls:0; --link:#ff9a4d;
+  --book-btn:#0b1322; --book-btn-ink:#ffffff;
+}

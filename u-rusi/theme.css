@@ -1,0 +1,12 @@
+/* @fonts: rubik, oswald */
+/* Тема «Песок»: светлая бежевая, оранжевый акцент, чёрные блоки. */
+:root{
+  --bg:#f3efe7; --bg2:#e9e3d7; --card:#fbf9f4; --line:#ddd4c3;
+  --text:#1b1813; --muted:#6b6355; --accent:#f26b1d; --accent-ink:#ffffff; --accent-soft:rgba(242,107,29,.12);
+  --header-bg:rgba(243,239,231,.93); --hero-rgb:24,20,15;
+  --radius:12px; --btn-radius:6px;
+  --font-body:Rubik,system-ui,sans-serif; --font-head:Oswald,Rubik,sans-serif;
+  --head-weight:700; --head-tt:uppercase; --head-ls:.015em; --link:#c4500f;
+  --book-bg:#1b1813; --book-ink:#f3efe7; --book-btn:#f26b1d; --book-btn-ink:#ffffff;
+}
+.book .consent a,.book .form-hint a{color:#f3efe7}

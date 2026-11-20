@@ -1,0 +1,11 @@
+/* @fonts: onest, oswald */
+/* Тема «Гараж»: графитовая, салатовый акцент, острые углы, узкие заголовки капсом. */
+:root{
+  --bg:#111311; --bg2:#171a17; --card:#1c201c; --line:#2c322c;
+  --text:#eef2ea; --muted:#9ba597; --accent:#b6f23a; --accent-ink:#111311; --accent-soft:rgba(182,242,58,.13);
+  --header-bg:rgba(17,19,17,.92); --hero-rgb:14,16,14;
+  --radius:4px; --btn-radius:2px;
+  --font-body:Onest,system-ui,sans-serif; --font-head:Oswald,Onest,sans-serif;
+  --head-weight:700; --head-tt:uppercase; --head-ls:.02em; --link:var(--accent);
+}
+.hero h1{line-height:1}
